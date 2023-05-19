@@ -1,7 +1,7 @@
 //IMPORTS
 //API Documentation.
-// import swaggerJSDoc from 'swagger-jsdoc';
-// import  SwaggerUiOptions  from 'swagger-ui-express';
+import swaggerJSDoc from 'swagger-jsdoc';
+import  SwaggerUiOptions  from 'swagger-ui-express';
 
 // const express = require("express"); // this is commonJS syntax eska use humlog module base me nahi kar sakte hain(ReferenceError: require is not defined in ES module scope) ye Error aayega---
 import express from 'express';         // this is moduleJS syntax
@@ -32,23 +32,23 @@ dotenv.config()  // agr route pe .env file rhega to config aise hoga
 connectDB();
 
 // // SWAGGER API CONFIG.
-// const options = {
-//       definition: {
-//             openapi: '3.0.0',
-//             info: {
-//                   title: "job Portal Application",
-//                   description: "NodeJS ExpressJS Job Portal Application"
-//             },
-//             servers: [
-//                   {
-//                         url: "http://localhost:8080",
-//                   },
-//             ],
-//       },
-//       apis : ["./routes/*.js"]
-// }
+const options = {
+      definition: {
+            openapi: '3.0.0',
+            info: {
+                  title: "job Portal Application",
+                  description: "NodeJS ExpressJS Job Portal Application"
+            },
+            servers: [
+                  {
+                        url: "http://localhost:8080",
+                  },
+            ],
+      },
+      apis : ["./routes/*.js"]
+}
 
-// const spec = swaggerJSDoc(options)
+const spec = swaggerJSDoc(options)
 
 
 //REST OBJECT
@@ -69,7 +69,7 @@ app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/job", jobsRoute);
 
 //SWAGGER HONEROUTE ROOT.
-// app.use("/api-doc", SwaggerUiOptions.serve, SwaggerUiOptions.setup(spec))
+app.use("/api-doc", SwaggerUiOptions.serve, SwaggerUiOptions.setup(spec))
 
 // VALIDATION MIDDLEWARE
 app.use(errorMiddleware)

@@ -15,45 +15,45 @@ const limiter = rateLimit({
 //router object
 const router = express.Router();
 
-// /**
-//  * @swagger
-//  * components:
-//  *  schemas:
-//  *   User:
-//  *    type: Object
-//  *    required:
-//  *     - first-name
-//  *     - last-name
-//  *     - email
-//  *     - password
-//  *     - location 
-//  *    properties:
-//  *     id:
-//  *      type: string
-//  *      description: The Auto-generated id of user collection
-//  *     first-name:
-//  *      type: string
-//  *      description: User First Name
-//  *     last-name:
-//  *      type: string
-//  *      description: User Last Name
-//  *     email:
-//  *      type: string
-//  *      description: User Email Address
-//  *     password:
-//  *      type: string
-//  *      description: User Password Should be greater then 6 character
-//  *     location:
-//  *      type: string
-//  *      description: User Location and Country 
-//  *     example:
-//  *      id: YDHKSDUHNCIUHDHWDH
-//  *      first-name: John
-//  *      last-name: Doe
-//  *      email: johndoe@gmail.com
-//  *      password: test@123
-//  *      location: delhi
-//  */
+/**
+ * @swagger
+ * components:
+ *  schemas:
+ *   User:
+ *    type: Object
+ *    required:
+ *     - first-name
+ *     - last-name
+ *     - email
+ *     - password
+ *     - location 
+ *    properties:
+ *     id:
+ *      type: string
+ *      description: The Auto-generated id of user collection
+ *     first-name:
+ *      type: string
+ *      description: User First Name
+ *     last-name:
+ *      type: string
+ *      description: User Last Name
+ *     email:
+ *      type: string
+ *      description: User Email Address
+ *     password:
+ *      type: string
+ *      description: User Password Should be greater then 6 character
+ *     location:
+ *      type: string
+ *      description: User Location and Country 
+ *     example:
+ *      id: YDHKSDUHNCIUHDHWDH
+ *      first-name: John
+ *      last-name: Doe
+ *      email: johndoe@gmail.com
+ *      password: test@123
+ *      location: delhi
+ */
 
 
 
